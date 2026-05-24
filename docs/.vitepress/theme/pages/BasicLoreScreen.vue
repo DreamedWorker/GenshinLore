@@ -2,6 +2,7 @@
 import Grid from '@/widgets/Grid.vue'
 import DocCard from '@/widgets/DocCard.vue'
 import MidTitle from '@/widgets/MidTitle.vue'
+import AppFooter from '@/components/theme/AppFooter.vue'
 </script>
 
 <template>
@@ -65,6 +66,7 @@ import MidTitle from '@/widgets/MidTitle.vue'
           <template #title>大地及装置</template>
         </DocCard>
       </Grid>
+      <AppFooter />
     </article>
   </div>
 </template>

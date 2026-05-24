@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import AppFooter from '../components/theme/AppFooter.vue'
+import AppFooter from '@/components/theme/AppFooter.vue'
 
 const nations = [
   { name: '蒙德', folder: 'Mondstadt', en: 'mondstadt' },
@@ -11,39 +11,30 @@ const nations = [
   { name: '至冬', folder: 'Snezhnaya', en: 'snezhnaya' },
   { name: '坎瑞亚', folder: 'Khaenriah', en: 'khaenriah' },
 ]
-
 </script>
 
 <template>
-  <div class="bg-[#111111BF] w-full min-h-screen flex flex-col overflow-x-hidden">
-    <section class="cities cities-section p-0">
-      <ul class="city_list w-full">
-        <li v-for="nation in nations" :key="nation.en" class="city_item">
-          <div
-            class="city_bg"
-            :style="{ backgroundImage: `url(/img/country/${nation.en}-bg.jpg)` }"
-          ></div>
-          <a class="city_link" :href="`/his/${nation.folder}/base.html`">
-            <p class="city_name" style="font-family: 'Genshin', sans-serif">{{ nation.name }}</p>
-          </a>
-          <div
-            class="city_char"
-            :style="{ backgroundImage: `url(/img/country/${nation.en}-char.png)` }"
-          ></div>
-        </li>
-      </ul>
-    </section>
+  <div class="bg-[#111111BF] w-full min-h-screen flex flex-col">
+    <ul>
+      <li v-for="nation in nations" :key="nation.en" class="city_item">
+        <div
+          class="city_bg"
+          :style="{ backgroundImage: `url(/img/country/${nation.en}-bg.jpg)` }"
+        ></div>
+        <a class="city_link" :href="`/his/${nation.folder}/base.html`">
+          <p class="city_name font-[Genshin]">{{ nation.name }}</p>
+        </a>
+        <div
+          class="city_char"
+          :style="{ backgroundImage: `url(/img/country/${nation.en}-char.png)` }"
+        ></div>
+      </li>
+    </ul>
     <AppFooter />
   </div>
 </template>
 
 <style scoped>
-.city_list {
-  display: grid;
-  gap: 0;
-  width: 100%;
-}
-
 .city_item {
   position: relative;
   width: 100%;
@@ -171,27 +162,7 @@ const nations = [
   }
 }
 
-.cities {
-  padding: 0;
-}
-
-.cities-section {
-  margin-top: calc(var(--mirror-notice-height, 0px) + var(--site-header-height-desktop, 70px));
-}
-
 @media screen and (max-width: 1012px) {
-  .cities-section {
-    margin-top: calc(var(--mirror-notice-height, 0px) + var(--site-header-height-mobile, 60px));
-  }
-
-  .cities {
-    padding: 0;
-  }
-
-  .city_list {
-    gap: 0;
-  }
-
   .city_item {
     height: 220px;
     border-radius: 0;
@@ -237,14 +208,6 @@ const nations = [
 }
 
 @media screen and (max-width: 768px) {
-  .cities {
-    padding: 0;
-  }
-
-  .city_list {
-    gap: 0;
-  }
-
   .city_item {
     height: 188px;
     border-radius: 0;

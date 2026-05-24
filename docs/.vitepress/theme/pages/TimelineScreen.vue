@@ -208,7 +208,6 @@ const rowsWithMergedCells = computed(() => {
 .timeline-page {
   min-height: 100vh;
   background: radial-gradient(circle at top, #26292e 0%, #1b1d21 52%, #17181b 100%);
-  padding-top: calc(var(--mirror-notice-height, 0px) + var(--site-header-height-desktop, 70px));
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -250,7 +249,7 @@ const rowsWithMergedCells = computed(() => {
 .table-scroll {
   overflow-x: auto;
   overflow-y: auto;
-  max-height: calc(100vh - var(--mirror-notice-height, 0px) - var(--site-header-height-desktop, 70px) - 80px);
+  max-height: calc(100vh - 80px);
   position: relative;
   scrollbar-gutter: stable both-edges;
   width: 100%;
@@ -444,7 +443,7 @@ const rowsWithMergedCells = computed(() => {
 
 @media screen and (max-width: 768px) {
   .timeline-page {
-    padding-top: calc(var(--mirror-notice-height, 0px) + var(--site-header-height-mobile, 60px));
+    padding-top: 0;
   }
 
   .table-wrapper {
@@ -452,7 +451,7 @@ const rowsWithMergedCells = computed(() => {
   }
 
   .table-scroll {
-    max-height: calc(100vh - var(--mirror-notice-height, 0px) - var(--site-header-height-mobile, 60px) - 72px);
+    max-height: calc(100vh - 72px);
     -webkit-overflow-scrolling: touch;
     overscroll-behavior: contain;
   }
