@@ -11,30 +11,17 @@ const title = computed(() => (frontmatter.value.title as string) ?? undefined)
 </script>
 
 <template>
-  <div :class="{ toc_visible: !isMobile && (frontmatter.show_toc ?? true) }" class="w-full">
-    <article class="relative w-full flex flex-col pt-7.5">
-      <span
-        v-if="title != undefined"
-        class="w-full text-center font-[Genshin] text-[42px] mb-10 pb-5 border-b-[3px] border-b-[#D3BC8E]"
-        >{{ title }}</span
-      >
-      <div v-if="(frontmatter.show_toc ?? true) && !isMobile">
-<!--        <TOC />-->
-      </div>
-      <Content class="main-text" />
-    </article>
-  </div>
+  <article class="relative w-full max-w-250 flex flex-col m-[0_auto] p-[60px_40px]">
+    <span
+      v-if="title != undefined"
+      class="w-full text-center font-[Genshin] text-[42px] mb-10 pb-5 border-b-[3px] border-b-[#D3BC8E]"
+      >{{ title }}</span
+    >
+    <div v-if="(frontmatter.show_toc ?? true) && !isMobile">
+      <!--        <TOC />-->
+    </div>
+    <Content class="main-text" />
+  </article>
 </template>
 
-<style scoped>
-article {
-  padding-inline: 2em;
-}
-
-@media not (max-width: 1210px) {
-  .toc_visible article {
-    padding-inline: 2em 0;
-    padding-right: 330px;
-  }
-}
-</style>
+<style scoped></style>
