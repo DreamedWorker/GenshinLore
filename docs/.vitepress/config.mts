@@ -21,6 +21,7 @@ import {
   siteUrl,
   transformSeoHead,
 } from './seo.mjs'
+import * as path from 'node:path'
 
 const tailwindPlugin = tailwindcss() as unknown as NonNullable<
   Parameters<typeof defineConfig>[0]['vite']
@@ -41,6 +42,8 @@ const configDir = dirname(fileURLToPath(import.meta.url))
 const docsDir = join(configDir, '..')
 const distDir = join(configDir, 'dist')
 const skippedMarkdownDirs = new Set(['.vitepress', 'public'])
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
+const clientDir = path.resolve(__dirname, './theme')
 
 function createStaticFallbackPages() {
   if (!existsSync(distDir)) return
@@ -182,6 +185,7 @@ function finalizeBuild() {
 }
 
 // https://vitepress.dev/reference/site-config
+// @ts-ignore
 export default defineConfig({
   title: siteTitle,
   description: siteDescription,
@@ -226,6 +230,7 @@ export default defineConfig({
 
   // 国内镜像站备案展示配置（填写备案号即启用显示）
   themeConfig: {
+    // @ts-ignore
     compliance: {
       icp: {
         number: '',
@@ -241,5 +246,10 @@ export default defineConfig({
       __MIRROR_COMMIT__: JSON.stringify(mirrorCommit),
     },
     plugins: [tailwindPlugin],
+    resolve: {
+      alias: {
+        '@': clientDir,
+      },
+    },
   },
 })

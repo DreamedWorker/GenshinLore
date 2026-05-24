@@ -1,0 +1,13 @@
+.main-text ol,
+.main-text ul {
+  list-style: decimal inside;
+}
+
+.main-text ol li,
+.main-text ul li {
+  color: #4d4f53;
+  font-size: 16px;
+  line-height: 2;
+  margin: 15px 0;
+  text-align: justify;
+}

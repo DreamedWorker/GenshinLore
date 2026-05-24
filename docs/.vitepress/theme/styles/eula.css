@@ -1,0 +1,119 @@
+.doc-normal {
+  border: 0;
+}
+
+.doc-normal h1,
+.doc-normal h2,
+.doc-normal h3,
+.doc-normal h4,
+.doc-normal h5,
+.doc-normal h6 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.doc-normal h1 {
+  font-size: 2em;
+  border-bottom: 1px solid #eaecef;
+  padding-bottom: 0.3em;
+}
+.doc-normal h2 {
+  font-family: 'Genshin', sans-serif;
+  font-size: 1.5em;
+  border-bottom: 2px solid #d3bc8e;
+  padding-bottom: 0.3em;
+}
+.doc-normal h3 {
+  font-size: 1.25em;
+}
+.doc-normal p {
+  margin-bottom: 16px;
+}
+
+.doc-normal code {
+  background-color: rgba(27, 31, 35, 0.05);
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  font-size: 85%;
+}
+.doc-normal pre {
+  background-color: #f6f8fa;
+  padding: 16px;
+  overflow: auto;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.doc-normal pre code {
+  background-color: transparent;
+  padding: 0;
+}
+.doc-normal blockquote {
+  border-left: 4px solid #dfe2e5;
+  padding-left: 16px;
+  margin-left: 0;
+  color: #6a737d;
+}
+.doc-normal ul,
+.doc-normal ol {
+  padding-left: 2em;
+  margin-bottom: 16px;
+}
+.doc-normal ul {
+  list-style-type: disc;
+}
+.doc-normal ol {
+  list-style-type: decimal;
+}
+.doc-normal li {
+  margin-bottom: 0.25em;
+}
+.doc-normal a {
+  color: #0366d6;
+  text-decoration: none;
+}
+.doc-normal a:hover {
+  text-decoration: underline;
+}
+.doc-normal table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 16px;
+}
+.doc-normal th,
+.doc-normal td {
+  border: 1px solid #dfe2e5;
+  padding: 6px 13px;
+}
+.doc-normal th {
+  background-color: #f6f8fa;
+  font-weight: 600;
+}
+.doc-normal tr:nth-child(2n) {
+  background-color: #f6f8fa;
+}
+.doc-normal hr {
+  border: none;
+  border-top: 1px solid #e1e4e8;
+  margin: 24px 0;
+}
+
+.doc-normal::-webkit-scrollbar {
+  width: 8px;
+}
+
+.doc-normal::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.doc-normal::-webkit-scrollbar-thumb {
+  background: #4d4f53;
+  border-radius: 4px;
+}
+
+.doc-normal::-webkit-scrollbar-thumb:hover {
+  background: #333;
+}

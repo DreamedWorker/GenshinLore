@@ -2,7 +2,7 @@
 import { useData } from 'vitepress'
 import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import type { Header } from 'vitepress'
-import useIsMobile from '../composables/isMobile'
+import useIsMobile from '../../composables/isMobile'
 
 const { page } = useData()
 const isMobile = useIsMobile()

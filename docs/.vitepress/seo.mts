@@ -81,6 +81,15 @@ export const siteHead: HeadConfig[] = [
   ['link', { rel: 'icon', href: '/favicon.png' }],
   ['link', { rel: 'apple-touch-icon', href: '/img/logo/favicon32x32.png' }],
   ['link', { rel: 'manifest', href: '/site.webmanifest' }],
+  ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
+  ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }],
+  [
+    'link',
+    {
+      href: 'https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100..900&display=swap',
+      rel: 'stylesheet',
+    },
+  ],
   ['meta', { name: 'keywords', content: siteKeywords }],
   ['meta', { name: 'author', content: '日月全事' }],
   [
