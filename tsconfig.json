@@ -11,8 +11,8 @@
     "paths": {
       "@/*": ["./docs/.vitepress/theme/*"]
     },
-    "types": ["vite/client"]
+    "types": ["vite/client", "node"]
   },
-  "include": ["./**/*.mts", "./**/*.ts", "./**/*.d.ts"],
+  "include": ["./**/*.mts", "./**/*.mjs", "./**/*.ts", "./**/*.d.ts"],
   "exclude": ["dist", "cache"]
 }
