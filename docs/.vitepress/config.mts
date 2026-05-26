@@ -2,13 +2,7 @@ import { defineConfig } from 'vitepress'
 import tailwindcss from '@tailwindcss/vite'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
-import {
-  siteDescription,
-  siteHead,
-  siteTitle,
-  siteUrl,
-  transformSeoHead,
-} from './seo.mjs'
+import { siteDescription, siteHead, siteTitle, siteUrl, transformSeoHead } from './seo.mjs'
 import * as path from 'node:path'
 import { finalizeBuild } from './node/build_end_hooks'
 import mirrorCommit from './node/commit_info'

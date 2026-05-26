@@ -1,0 +1,133 @@
+.main-text .timeline {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+}
+
+.main-text .timeline::before {
+  content: '';
+  position: absolute;
+  left: 30px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(to bottom, #d3bc8e, #4d4f53);
+  border-radius: 2px;
+}
+
+/* 时间线 section */
+.main-text .timeline-section {
+  margin-bottom: 60px;
+  position: relative;
+}
+
+/* 时间线 H2 章节标题 */
+.main-text .timeline-period,
+.main-text .timeline > h2 {
+  font-family: 'Genshin', sans-serif;
+  font-size: 24px;
+  color: #d3bc8e;
+  margin: 40px 0 30px 70px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #d3bc8e;
+  position: relative;
+}
+
+.main-text .timeline-period::before,
+.main-text .timeline > h2::before {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  background-color: #d3bc8e;
+  border-radius: 50%;
+  border: 3px solid #4d4f53;
+  box-shadow: 0 0 0 3px #d3bc8e;
+}
+
+/* 时间线 H3 小节标题 */
+.main-text .timeline-main-title,
+.main-text .timeline > h3 {
+  font-family: 'Genshin', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #4d4f53;
+  margin: 30px 0 30px 70px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  position: relative;
+}
+
+.main-text .timeline-main-title::before,
+.main-text .timeline > h3::before {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  background-color: #4d4f53;
+  border-radius: 50%;
+  border: 2px solid #d3bc8e;
+}
+
+/* 时间线注释 */
+.main-text .timeline-note {
+  font-size: 12px;
+  color: #8d8f93;
+  margin: 0 0 30px 70px;
+}
+
+/* 时间线项目 */
+.main-text .timeline-item {
+  margin-left: 70px;
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #fafafa;
+  border-radius: 8px;
+  border-left: 3px solid #d3bc8e;
+  position: relative;
+}
+
+.main-text .timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -43px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background-color: #4d4f53;
+  border-radius: 50%;
+  border: 2px solid #d3bc8e;
+}
+
+/* 时间线子标题 */
+.main-text .timeline-subtitle,
+.main-text .timeline-item h4,
+.main-text .timeline-item h5 {
+  font-family: 'Genshin', sans-serif !important;
+  font-size: 18px !important;
+  color: #4d4f53 !important;
+  margin: 0 !important;
+  font-weight: bold !important;
+  padding: 0 !important;
+  border: none !important;
+  background: none !important;
+}
+
+/* 时间线正文 */
+.main-text .timeline-content {
+  font-size: 14px;
+  color: #5a5c5f;
+  line-height: 1.8;
+  margin: 10px 0;
+  text-align: left;
+}

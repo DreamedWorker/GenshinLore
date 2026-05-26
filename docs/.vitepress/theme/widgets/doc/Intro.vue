@@ -8,7 +8,6 @@
 
 <style scoped>
 .intro-text {
-  font-family: Common, sans-serif !important;
   font-size: 18px !important;
   color: rgb(77, 79, 83) !important;
   text-align: center !important;

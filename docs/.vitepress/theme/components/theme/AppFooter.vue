@@ -7,10 +7,13 @@ interface RecordConfig {
 }
 
 const { theme } = useData()
-const compliance = computed(() => (theme.value?.compliance ?? {}) as {
-  icp?: RecordConfig
-  mps?: RecordConfig
-})
+const compliance = computed(
+  () =>
+    (theme.value?.compliance ?? {}) as {
+      icp?: RecordConfig
+      mps?: RecordConfig
+    },
+)
 
 const icp = computed(() => compliance.value.icp ?? {})
 const mps = computed(() => compliance.value.mps ?? {})

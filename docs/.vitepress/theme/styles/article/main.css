@@ -3,6 +3,7 @@
 @import './list.css';
 @import './blockquote.css';
 @import './code.css';
+@import './timeline.css';
 
 .main-text::-webkit-scrollbar {
   width: 8px;

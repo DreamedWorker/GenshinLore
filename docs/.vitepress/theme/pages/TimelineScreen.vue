@@ -139,7 +139,10 @@ const rowsWithMergedCells = computed(() => {
 <template>
   <!-- 按照原设计意图，本页面全页禁止选中 -->
   <div v-if="!blurred" class="timeline-page select-none">
-    <div class="table-wrapper" :class="{ 'can-scroll-left': canScrollLeft, 'can-scroll-right': canScrollRight }">
+    <div
+      class="table-wrapper"
+      :class="{ 'can-scroll-left': canScrollLeft, 'can-scroll-right': canScrollRight }"
+    >
       <div ref="tableScrollRef" class="table-scroll" @scroll="onTableScroll">
         <table class="timeline-table">
           <thead>

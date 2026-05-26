@@ -250,7 +250,9 @@ onUnmounted(() => {
   }
 
   .nav-menu.active .nav-list {
-    max-height: calc(100vh - var(--mirror-notice-height, 0px) - var(--site-header-height-mobile, 60px));
+    max-height: calc(
+      100vh - var(--mirror-notice-height, 0px) - var(--site-header-height-mobile, 60px)
+    );
     opacity: 1;
     visibility: visible;
     padding: 10px 0;

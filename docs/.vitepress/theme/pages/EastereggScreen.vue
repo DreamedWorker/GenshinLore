@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import Spacer from '../client/widgets/Spacer.vue'
 import { easterEggs } from '../../data/interestfactsData'
+import Space from '../widgets/doc/Space.vue'
 
 const showModal = ref(false)
 const easterEggsData = easterEggs
@@ -24,11 +24,11 @@ function onKeydown(e: KeyboardEvent) {
 <template>
   <div class="w-screen">
     <main class="easteregg-main">
-      <Spacer :size="20" />
+      <Space :size="20" />
       <p class="genshin-font text-center text-[#4d4f53] text-4xl">
         关于原神你不知道的很多事实和彩蛋
       </p>
-      <Spacer :size="20" />
+      <Space :size="20" />
       <p class="text-center text-[#8d8f93]">
         这里会存放一些制作组的小巧思，欢迎各位旅行者投稿。投稿即代表你同意《<span
           class="agreement-link"
@@ -36,7 +36,7 @@ function onKeydown(e: KeyboardEvent) {
           >投稿协议</span
         >》
       </p>
-      <Spacer :size="30" />
+      <Space :size="30" />
       <div class="max-w-300 m-[0_auto]">
         <div v-for="entry in easterEggsData" :key="entry.id" class="fact-item">
           <div class="flex items-start gap-2.5 mb-3.75">

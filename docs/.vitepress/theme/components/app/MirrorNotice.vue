@@ -15,7 +15,10 @@ const trackWrapRef = ref<HTMLElement | null>(null)
 const textRef = ref<HTMLElement | null>(null)
 
 function applyNoticeHeight() {
-  document.documentElement.style.setProperty('--mirror-notice-height', visible.value ? '32px' : '0px')
+  document.documentElement.style.setProperty(
+    '--mirror-notice-height',
+    visible.value ? '32px' : '0px',
+  )
 }
 
 function updateMarquee() {

@@ -193,7 +193,13 @@ onBeforeUnmount(() => {
     </transition>
 
     <transition name="toc-mobile-sheet">
-      <section v-if="mobileDrawerOpen" ref="mobileSheetRef" class="toc-mobile-sheet" role="dialog" aria-modal="true">
+      <section
+        v-if="mobileDrawerOpen"
+        ref="mobileSheetRef"
+        class="toc-mobile-sheet"
+        role="dialog"
+        aria-modal="true"
+      >
         <div class="toc-mobile-header">
           <h3 class="toc-mobile-title">目录导航</h3>
           <button class="toc-mobile-close" @click="closeMobileDrawer" title="关闭目录">✕</button>

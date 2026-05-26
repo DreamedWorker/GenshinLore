@@ -46,7 +46,10 @@ function updatePosition() {
       top = Math.max(pad, vh - tooltip.height - pad)
     }
 
-    const arrowLeft = Math.max(14, Math.min(trigger.left + trigger.width / 2 - left, tooltip.width - 14))
+    const arrowLeft = Math.max(
+      14,
+      Math.min(trigger.left + trigger.width / 2 - left, tooltip.width - 14),
+    )
     tooltipStyle.value = {
       left: `${left}px`,
       top: `${top}px`,
